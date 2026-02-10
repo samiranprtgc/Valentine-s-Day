@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background:
+        linear-gradient(rgba(255,241,245,0.9), rgba(255,228,233,0.9)),
+        url('watermark.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #c2185b;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #c2185b;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .gallery img:nth-child(1) { animation-delay: 0.1s; }
+    .gallery img:nth-child(2) { animation-delay: 0.3s; }
+    .gallery img:nth-child(3) { animation-delay: 0.5s; }
+    .gallery img:nth-child(4) { animation-delay: 0.7s; }
+    .gallery img:nth-child(5) { animation-delay: 0.9s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .message {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    footer {
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <h1>Happy Valentine’s Day ❤️</h1>
+    <p>
+      From the moment you walked into my life, everything felt warmer,
+      calmer, and more meaningful. This little page is just for you.
+    </p>
+
+    <button class="btn"
+      onclick="document.getElementById('memories').style.display='block';
+               document.getElementById('memories').scrollIntoView({behavior:'smooth'});">
+      See Our Memories
+    </button>
+  </section>
+
+  <section id="memories" style="display:none;">
+    <h2>Our Moments</h2>
+    <p>Some moments I never want to forget.</p>
+
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Us 1" />
+      <img src="photo2.jpg" alt="Us 2" />
+      <img src="photo3.jpg" alt="Us 3" />
+      <img src="photo4.jpg" alt="Us 4" />
+      <img src="photo5.jpg" alt="Us 5" />
+    </div>
+  </section>
+
+  <section>
+    <h2>A Message For You</h2>
+    <div class="message">
+      <p>
+        I don’t know what the future looks like, but I know this:
+        having you in my life makes every ordinary day feel special.
+      </p>
+      <p>
+        Your smile, your voice, your presence — they matter
+        more to me than I can explain.
+      </p>
+      <p>
+        Always yours.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Made with love ❤️
+  </footer>
+
+</body>
+</html>
